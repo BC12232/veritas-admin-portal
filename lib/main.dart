@@ -6,7 +6,9 @@ import 'package:veritas_admin/globals/constants.dart';
 import 'package:veritas_admin/routes/router_generator.dart';
 import 'package:veritas_admin/routes/routes.dart';
 
+import 'routes/routes.dart';
 import 'widgets/navbar/app_view.dart';
+import 'views/home_page/home_page_view.dart';
 
 void main() {
   runApp(MyApp());
@@ -17,16 +19,20 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Veritas Admin Portal',
+      title: 'Veritas Admin Portal', //TO DO: REMOVE YELLOW UNDERLINE
       theme: ThemeData(
         primarySwatch: Colors.blue,
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      builder: (_, child) => AppView(
-        child: child,
-      ),
-      initialRoute: INITIAL_ROUTE,
-      navigatorKey: navKey, //allows navigation without context.
+
+      home: HomePageView(), //TO START AT HOMEPAGE
+      // builder: (_, child) => AppView(
+      //   child: child,
+      // ),
+      //initialRoute: INITIAL_ROUTE,
+
+      // initialRoute: routeHomePage,
+      // navigatorKey: navKey, //allows navigation without context.
       onGenerateRoute: RouteGenerator.generateRoute,
     );
   }

@@ -1,5 +1,5 @@
 import 'package:flutter/cupertino.dart';
-import 'package:veritas_admin/constants/constants.dart';
+import 'package:veritas_admin/globals/constants.dart';
 import 'package:veritas_admin/routes/routes.dart';
 import 'package:veritas_admin/widgets/navbar/profile_image.dart';
 import 'navigation_item.dart';

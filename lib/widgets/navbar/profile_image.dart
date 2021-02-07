@@ -21,8 +21,7 @@ class ProfileImage extends StatelessWidget {
           decoration: BoxDecoration(
             shape: BoxShape.circle,
             image: DecorationImage(
-                image: new AssetImage(
-                    'assets/images/logo.png'), //NetworkImage('https://googleflutter.com/sample_image.jpg'),
+                image: new AssetImage('assets/images/admin.png'), //////
                 fit: BoxFit.fill),
           ),
         ));
