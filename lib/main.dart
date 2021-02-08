@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:veritas_admin/globals/constants.dart';
 import 'package:veritas_admin/routes/router_generator.dart';
 import 'package:veritas_admin/routes/routes.dart';
+import 'package:veritas_admin/views/gcm/gcm_feedback.dart';
 
 import 'routes/routes.dart';
 import 'widgets/navbar/app_view.dart';
@@ -19,7 +20,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Veritas Admin Portal', //TO DO: REMOVE YELLOW UNDERLINE
+      title: 'Veritas Admin Portal',
       theme: ThemeData(
         primarySwatch: Colors.blue,
         visualDensity: VisualDensity.adaptivePlatformDensity,

@@ -6,11 +6,14 @@ class FinancialSummaryView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Center(
-      child: Container(
-        child: Text(
-          'Financial Summary',
-          style: TextStyle(fontSize: 30),
+    return Material(
+      //to avoid the yellow underline
+      child: Center(
+        child: Container(
+          child: Text(
+            'Financial Summary',
+            style: TextStyle(fontSize: 30),
+          ),
         ),
       ),
     );

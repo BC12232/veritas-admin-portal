@@ -9,7 +9,8 @@ final NAVBAR_PADDING_RATIO = 0.02; //width (% context), of item img&text padding
 final VERITAS_RED = Color(0xff952939);
 final LIGHT_GREY = Color(0xfff4f4f4); //aRGB
 final BLACK_COLOR = Color(0xFF000000);
-final LIGHT_PINK = Colors.pink[50];
+final LIGHT_PINK = Color(0xFFFEF4F4);
+final DARK_GREEN = Color(0xFF319987);
 
 //CONFIG
 final String INITIAL_ROUTE = routeManageUniversity; //Initial screen loaded.

@@ -6,11 +6,14 @@ class ViewUsersView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Center(
-      child: Container(
-        child: Text(
-          'View Users',
-          style: TextStyle(fontSize: 30),
+    return Material(
+      //to avoid the yellow underline
+      child: Center(
+        child: Container(
+          child: Text(
+            'View Users',
+            style: TextStyle(fontSize: 30),
+          ),
         ),
       ),
     );

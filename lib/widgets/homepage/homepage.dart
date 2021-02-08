@@ -9,9 +9,11 @@ class HomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      child: Column(
+    return Material(
+      child: Container(
+          child: Column(
         children: [
+          SizedBox(height: 30),
           Row(mainAxisAlignment: MainAxisAlignment.end, children: [
             ProfileImage(''),
           ]),
@@ -19,14 +21,14 @@ class HomePage extends StatelessWidget {
             'Veritas Admin Portal',
             textAlign: TextAlign.center,
             style: TextStyle(
-                fontWeight: FontWeight.w100, fontSize: 30, color: BLACK_COLOR),
+                fontWeight: FontWeight.w400, fontSize: 30, color: BLACK_COLOR),
           ),
           SizedBox(height: 60),
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               SizedBox(
-                width: 200,
+                width: 300,
                 child: FlatButton(
                   child: Text(
                     'Manage \n University',
@@ -43,7 +45,7 @@ class HomePage extends StatelessWidget {
               ),
               SizedBox(width: 10),
               SizedBox(
-                width: 200,
+                width: 300,
                 child: FlatButton(
                   child: Text(
                     'Manage \n Administrator',
@@ -60,7 +62,7 @@ class HomePage extends StatelessWidget {
               ),
               SizedBox(width: 10),
               SizedBox(
-                width: 200,
+                width: 300,
                 child: FlatButton(
                   child: Text(
                     'Global Content \n Managment',
@@ -82,7 +84,7 @@ class HomePage extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               SizedBox(
-                width: 200,
+                width: 300,
                 child: FlatButton(
                   child: Text(
                     'View Users ',
@@ -99,7 +101,7 @@ class HomePage extends StatelessWidget {
               ),
               SizedBox(width: 10),
               SizedBox(
-                width: 200,
+                width: 300,
                 child: FlatButton(
                   child: Text(
                     'View Parings',
@@ -116,7 +118,7 @@ class HomePage extends StatelessWidget {
               ),
               SizedBox(width: 10),
               SizedBox(
-                width: 200,
+                width: 300,
                 child: FlatButton(
                   child: Text(
                     'Financial \n Summary',
@@ -134,7 +136,7 @@ class HomePage extends StatelessWidget {
             ],
           ),
         ],
-      ),
+      )),
     );
   }
 }

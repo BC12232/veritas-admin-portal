@@ -6,11 +6,13 @@ class ViewPairingsView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Center(
-      child: Container(
-        child: Text(
-          'View Pairings',
-          style: TextStyle(fontSize: 30),
+    return Material(
+      child: Center(
+        child: Container(
+          child: Text(
+            'View Pairings',
+            style: TextStyle(fontSize: 30),
+          ),
         ),
       ),
     );
