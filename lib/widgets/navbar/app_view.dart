@@ -11,6 +11,8 @@ class AppView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    //print("thing");  <---- only fires when you resize screen, not when navbar option clicked
+
     return Scaffold(
       backgroundColor: Colors.white,
       body: Column(
