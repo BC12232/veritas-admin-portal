@@ -3,7 +3,7 @@ import 'package:veritas_admin/globals/constants.dart';
 import 'package:veritas_admin/globals/helper_functions.dart';
 import 'package:veritas_admin/models/profile_info.dart';
 
-final double RADIUS = 80.0;
+const double RADIUS = 80.0;
 
 class ProfileImage extends StatelessWidget {
   //True if it's in the nav bar. White background.
@@ -24,13 +24,27 @@ class ProfileImage extends StatelessWidget {
         child: Container(
           width: RADIUS,
           height: RADIUS,
-          child: Center(
+          child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+                Container(
+                    padding: EdgeInsets.fromLTRB(0, 0, 0,
+                        10), // hacky-hack to get the letter to center in the circle :/
+                    child: Text(letterFirstName,
+                        style: TextStyle(
+                            color: _isInNav
+                                ? PROFILE_CIRCLE_TEXT_COLOR
+                                : ALT_PROFILE_CIRCLE_TEXT_COLOR,
+                            fontSize: 40)))
+              ]),
+          /*Center(
               child: Text(letterFirstName,
                   style: TextStyle(
                       color: _isInNav
                           ? PROFILE_CIRCLE_TEXT_COLOR
                           : ALT_PROFILE_CIRCLE_TEXT_COLOR,
-                      fontSize: 40))),
+                      fontSize: 40))),*/
           decoration: BoxDecoration(
               shape: BoxShape.circle,
               color: _isInNav ? PROFILE_CIRCLE_COLOR : ALT_PROFILE_CIRCLE_COLOR

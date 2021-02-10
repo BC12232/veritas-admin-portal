@@ -3,7 +3,7 @@ import 'package:veritas_admin/routes/routes.dart';
 
 //Navbar Styles
 final TextStyle kPageTitleStyle =
-    TextStyle(color: Colors.white, fontSize: 18.0, fontFamily: 'Nunito'); //Text
+    TextStyle(color: Colors.white, fontSize: 18.0); //Text
 const NAVBAR_PADDING_RATIO = 0.02; //width (% context), of item img&text padding
 
 //COLORS
