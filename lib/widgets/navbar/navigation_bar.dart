@@ -1,5 +1,5 @@
 import 'package:flutter/cupertino.dart';
-import 'package:veritas_admin/constants/constants.dart';
+import 'package:veritas_admin/globals/constants.dart';
 import 'package:veritas_admin/routes/routes.dart';
 import 'package:veritas_admin/widgets/navbar/profile_image.dart';
 import 'navigation_item.dart';
@@ -20,7 +20,7 @@ class _NavigationBarState extends State<NavigationBar> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      color: LIGHT_GREY,
+      color: TOP_BAR_COLOR,
       padding: const EdgeInsets.fromLTRB(
           HZ_PADDING, V_PADDING, HZ_PADDING, V_PADDING),
       height: 130.0,
@@ -64,8 +64,7 @@ class _NavigationBarState extends State<NavigationBar> {
             routeName: routeFinancialSummary,
             onHighlight: onHighlight,
           ),
-          ProfileImage(
-              'TODO: insert image route when backend is rdy... not working yet')
+          ProfileImage(true)
         ],
       ),
     );

@@ -23,8 +23,7 @@ class InteractiveTextState extends State<InteractiveText> {
       onExit: (_) => _hovered(false),
       child: Text(widget.text,
           style: _hovering
-              ? kPageTitleStyle.copyWith(
-                  color: VERITAS_RED, decoration: TextDecoration.underline)
+              ? kPageTitleStyle.copyWith(decoration: TextDecoration.underline)
               : (widget.selected)
                   ? kPageTitleStyle.copyWith(fontWeight: FontWeight.bold)
                   : kPageTitleStyle),
