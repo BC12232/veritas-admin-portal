@@ -14,6 +14,8 @@ class ProfileInfo {
   //TODO: from endpoint once
 
   static String getFirstLetter() {
+    //TODO: local shorage this value once you have it, then reset wehn they log out.
+
     var jsonData = '{ "firstName" : "Brian", "lastName" : "Koo"  }';
     var parsedJson = json.decode(jsonData); //Map<String, dynamic>
     var profile = ProfileInfo.fromJson(parsedJson);
