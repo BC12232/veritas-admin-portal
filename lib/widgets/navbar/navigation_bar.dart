@@ -19,53 +19,58 @@ class _NavigationBarState extends State<NavigationBar> {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      color: TOP_BAR_COLOR,
-      padding: const EdgeInsets.fromLTRB(
-          HZ_PADDING, V_PADDING, HZ_PADDING, V_PADDING),
-      height: 130.0,
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceAround,
-        mainAxisSize: MainAxisSize.max,
-        children: [
-          NavigationItem(
-            selected: index == 1,
-            title: 'Manage University',
-            routeName: routeManageUniversity,
-            onHighlight: onHighlight,
-          ),
-          NavigationItem(
-            selected: index == 2,
-            title: 'Manage Admin',
-            routeName: routeManageAdmin,
-            onHighlight: onHighlight,
-          ),
-          NavigationItem(
-            selected: index == 3,
-            title: 'Global C.M.',
-            routeName: routeGCM,
-            onHighlight: onHighlight,
-          ),
-          NavigationItem(
-            selected: index == 4,
-            title: 'View Users',
-            routeName: routeViewUsers,
-            onHighlight: onHighlight,
-          ),
-          NavigationItem(
-            selected: index == 5,
-            title: 'View Pairings',
-            routeName: routeViewPairings,
-            onHighlight: onHighlight,
-          ),
-          NavigationItem(
-            selected: index == 6,
-            title: 'Financial Summary',
-            routeName: routeFinancialSummary,
-            onHighlight: onHighlight,
-          ),
-          ProfileImage(true)
-        ],
+    print('testing.......');
+    print(SHOW_NAVBAR);
+    return Visibility(
+      visible: SHOW_NAVBAR ? true : false,
+      child: Container(
+        color: TOP_BAR_COLOR,
+        padding: const EdgeInsets.fromLTRB(
+            HZ_PADDING, V_PADDING, HZ_PADDING, V_PADDING),
+        height: 130.0,
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceAround,
+          mainAxisSize: MainAxisSize.max,
+          children: [
+            NavigationItem(
+              selected: index == 1,
+              title: 'Manage University',
+              routeName: routeManageUniversity,
+              onHighlight: onHighlight,
+            ),
+            NavigationItem(
+              selected: index == 2,
+              title: 'Manage Admin',
+              routeName: routeManageAdmin,
+              onHighlight: onHighlight,
+            ),
+            NavigationItem(
+              selected: index == 3,
+              title: 'Global C.M.',
+              routeName: routeGCM,
+              onHighlight: onHighlight,
+            ),
+            NavigationItem(
+              selected: index == 4,
+              title: 'View Users',
+              routeName: routeViewUsers,
+              onHighlight: onHighlight,
+            ),
+            NavigationItem(
+              selected: index == 5,
+              title: 'View Pairings',
+              routeName: routeViewPairings,
+              onHighlight: onHighlight,
+            ),
+            NavigationItem(
+              selected: index == 6,
+              title: 'Financial Summary',
+              routeName: routeFinancialSummary,
+              onHighlight: onHighlight,
+            ),
+            ProfileImage(true)
+          ],
+        ),
       ),
     );
   }
@@ -81,6 +86,8 @@ class _NavigationBarState extends State<NavigationBar> {
   void onHighlight(String route) {
     switch (route) {
       case routeManageUniversity:
+        print('1');
+        //SHOW_NAVBAR = false;
         changeHighlight(1);
         break;
       case routeManageAdmin:
