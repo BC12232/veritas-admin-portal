@@ -30,7 +30,7 @@ class ProfileImage extends StatelessWidget {
                       color: _isInNav
                           ? PROFILE_CIRCLE_TEXT_COLOR
                           : ALT_PROFILE_CIRCLE_TEXT_COLOR,
-                      fontSize: 35))),
+                      fontSize: 40))),
           decoration: BoxDecoration(
               shape: BoxShape.circle,
               color: _isInNav ? PROFILE_CIRCLE_COLOR : ALT_PROFILE_CIRCLE_COLOR

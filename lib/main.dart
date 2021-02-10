@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:veritas_admin/globals/constants.dart';
 import 'package:veritas_admin/routes/router_generator.dart';
 import 'package:veritas_admin/routes/routes.dart';
+import 'package:veritas_admin/style.dart';
 
 import 'widgets/navbar/app_view.dart';
 
