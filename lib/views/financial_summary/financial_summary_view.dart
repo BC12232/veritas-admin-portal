@@ -1,6 +1,5 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:veritas_admin/globals/constants.dart';
 import 'package:veritas_admin/widgets/navbar/navigation_bar.dart';
 
 class FinancialSummaryView extends StatelessWidget {
@@ -8,18 +7,16 @@ class FinancialSummaryView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // SHOW_NAVBAR = true;
-    return Center(
-      child: Container(
-          child: Column(
-        children: [
-          //NavigationBar(),
-          Text(
+    return Column(children: [
+      NavigationBar(1),
+      Center(
+        child: Container(
+          child: Text(
             'Financial Summary',
             style: TextStyle(fontSize: 30),
           ),
-        ],
-      )),
-    );
+        ),
+      )
+    ]);
   }
 }

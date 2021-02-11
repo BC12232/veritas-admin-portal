@@ -8,18 +8,21 @@ class ManageUniversityView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    //SHOW_NAVBAR = true;
-    return Center(
-      child: Container(
-          child: Column(
-        children: [
-          //NavigationBar(),
-          Text(
-            'Manage University',
-            style: TextStyle(fontSize: 30),
-          ),
-        ],
-      )),
-    );
+    print("rendering ManageUniversity");
+    return Column(children: [
+      NavigationBar(0),
+      Center(
+        child: Container(
+            child: Column(
+          children: [
+            //NavigationBar(),
+            Text(
+              'Manage University',
+              style: TextStyle(fontSize: 30),
+            ),
+          ],
+        )),
+      )
+    ]);
   }
 }

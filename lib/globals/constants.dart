@@ -5,7 +5,6 @@ import 'package:veritas_admin/routes/routes.dart';
 final TextStyle kPageTitleStyle =
     TextStyle(color: Colors.white, fontSize: 18.0); //Text
 const NAVBAR_PADDING_RATIO = 0.02; //width (% context), of item img&text padding
-bool SHOW_NAVBAR = false;
 
 //COLORS
 const VERITAS_RED = Color(0xff952939);
@@ -24,3 +23,6 @@ const ALT_PROFILE_CIRCLE_TEXT_COLOR = Colors.black;
 
 //CONFIG
 const String INITIAL_ROUTE = routeManageUniversity; //Initial screen loaded.
+
+//STATE
+int PAGE_INDEX = 0;

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:veritas_admin/globals/constants.dart';
+import 'package:veritas_admin/globals/global_instances.dart';
 import 'package:veritas_admin/views/home_page/home_page_view.dart';
 import 'package:veritas_admin/widgets/navbar/profile_image.dart';
 import '../../routes/routes.dart';
@@ -9,7 +10,6 @@ class HomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    //SHOW_NAVBAR = true;
     return Material(
       child: Container(
           child: Column(
@@ -40,8 +40,9 @@ class HomePage extends StatelessWidget {
                   shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(15)),
                   onPressed: () {
+                    PAGE_INDEX = 0;
+                    print("just set page index to 0");
                     Navigator.pushNamed(context, routeManageUniversity);
-                    //SHOW_NAVBAR = true;
                   },
                 ),
               ),
@@ -58,6 +59,8 @@ class HomePage extends StatelessWidget {
                   shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(15)),
                   onPressed: () {
+                    PAGE_INDEX = 1;
+                    print("just set page index to 1");
                     Navigator.pushNamed(context, routeManageAdmin);
                   },
                 ),
@@ -75,7 +78,7 @@ class HomePage extends StatelessWidget {
                   shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(15)),
                   onPressed: () {
-                    Navigator.pushNamed(context, routeManageUniversity);
+                    Navigator.pushNamed(context, routeGCM);
                   },
                 ),
               ),

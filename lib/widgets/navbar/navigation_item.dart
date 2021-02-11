@@ -8,22 +8,24 @@ import 'interactive_nav_item.dart';
 class NavigationItem extends StatelessWidget {
   final String title;
   final String routeName;
-  final bool selected;
   final Function onHighlight;
+  final int thisIndex;
 
   const NavigationItem({
     @required this.title,
     @required this.routeName,
-    @required this.selected,
     @required this.onHighlight,
+    @required this.thisIndex,
   });
 
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () {
+        //TAKES YOU to the new route.
+        PAGE_INDEX = thisIndex;
         navKey.currentState.pushNamed(routeName);
-        onHighlight(routeName);
+        //onHighlight(routeName);
       },
       child: Padding(
         padding: EdgeInsets.symmetric(
@@ -31,7 +33,7 @@ class NavigationItem extends StatelessWidget {
         child: InteractiveNavItem(
           text: title,
           routeName: routeName,
-          selected: selected,
+          selected: thisIndex == PAGE_INDEX,
         ),
       ),
     );
