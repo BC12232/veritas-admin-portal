@@ -25,7 +25,10 @@ class InteractiveTextState extends State<InteractiveText> {
           style: _hovering
               ? kPageTitleStyle.copyWith(decoration: TextDecoration.underline)
               : (widget.selected)
-                  ? kPageTitleStyle.copyWith(fontWeight: FontWeight.bold)
+                  ? kPageTitleStyle.copyWith(
+                      fontFamily: 'Nunito-Light',
+                      color: Colors.white,
+                      fontWeight: FontWeight.w600)
                   : kPageTitleStyle),
     );
   }

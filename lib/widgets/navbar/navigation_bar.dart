@@ -1,4 +1,5 @@
 import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
 import 'package:veritas_admin/globals/constants.dart';
 import 'package:veritas_admin/routes/routes.dart';
 import 'package:veritas_admin/widgets/navbar/profile_image.dart';
@@ -12,13 +13,29 @@ const double V_PADDING = 0;
 class NavigationBar extends StatefulWidget {
   @override
   _NavigationBarState createState() => _NavigationBarState();
+
+  //hacky, but it works
+  int _index;
+  NavigationBar(int _index) {
+    _index = this._index;
+    print("setting index... :");
+    print(_index);
+  }
+
+  int getIndex() {
+    return _index;
+  }
 }
 
 class _NavigationBarState extends State<NavigationBar> {
-  int index = 0;
+  //int index = 0;
+  // ignore: non_constant_identifier_names
 
   @override
   Widget build(BuildContext context) {
+    print('testing.......');
+    print(PAGE_INDEX);
+
     return Container(
       color: TOP_BAR_COLOR,
       padding: const EdgeInsets.fromLTRB(
@@ -29,40 +46,40 @@ class _NavigationBarState extends State<NavigationBar> {
         mainAxisSize: MainAxisSize.max,
         children: [
           NavigationItem(
-            selected: index == 1,
             title: 'Manage University',
             routeName: routeManageUniversity,
             onHighlight: onHighlight,
+            thisIndex: 0,
           ),
           NavigationItem(
-            selected: index == 2,
             title: 'Manage Admin',
             routeName: routeManageAdmin,
             onHighlight: onHighlight,
+            thisIndex: 1,
           ),
           NavigationItem(
-            selected: index == 3,
             title: 'Global C.M.',
             routeName: routeGCM,
             onHighlight: onHighlight,
+            thisIndex: 2,
           ),
           NavigationItem(
-            selected: index == 4,
             title: 'View Users',
             routeName: routeViewUsers,
             onHighlight: onHighlight,
+            thisIndex: 3,
           ),
           NavigationItem(
-            selected: index == 5,
             title: 'View Pairings',
             routeName: routeViewPairings,
             onHighlight: onHighlight,
+            thisIndex: 4,
           ),
           NavigationItem(
-            selected: index == 6,
             title: 'Financial Summary',
             routeName: routeFinancialSummary,
             onHighlight: onHighlight,
+            thisIndex: 5,
           ),
           ProfileImage(true)
         ],
@@ -73,37 +90,43 @@ class _NavigationBarState extends State<NavigationBar> {
 //On init, bold.
   @override
   void initState() {
-    onHighlight(INITIAL_ROUTE); //SET TO MANAGE UNIVERSITY.
+    //onHighlight(PAGE_INDEX) //SET TO MANAGE UNIVERSITY.
+    //changeHighlight(PAGE_INDEX);
   }
 
 //Red => Bold Selected current index
 //TODO: call this on load!
-  void onHighlight(String route) {
-    switch (route) {
-      case routeManageUniversity:
-        changeHighlight(1);
+  void onHighlight(int ind) {
+    //changeHighlight(ind);
+    /*
+    switch (ind) {
+      case 0:
+        print('1');
+        //SHOW_NAVBAR = false;
+        changeHighlight(0);
         break;
       case routeManageAdmin:
-        changeHighlight(2);
+        changeHighlight(1);
         break;
       case routeGCM:
-        changeHighlight(3);
+        changeHighlight(2);
         break;
       case routeViewUsers:
-        changeHighlight(4);
+        changeHighlight(3);
         break;
       case routeViewPairings:
-        changeHighlight(5);
+        changeHighlight(4);
         break;
       case routeFinancialSummary:
-        changeHighlight(6);
+        changeHighlight(5);
         break;
-    }
+  }*/
   }
 
+/*DO NOT DELETE UNTIL WE FIGURE OUT HOW TO DO THIS STATEFULLY!*/
   void changeHighlight(int newIndex) {
-    setState(() {
-      index = newIndex;
-    });
+    /*setState(() {
+      PAGE_INDEX = newIndex;
+    });*/
   }
 }

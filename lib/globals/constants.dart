@@ -10,6 +10,8 @@ const NAVBAR_PADDING_RATIO = 0.02; //width (% context), of item img&text padding
 const VERITAS_RED = Color(0xff952939);
 const DARK_GREEN = Color(0xff309987);
 const LIGHT_GREY = Color(0xfff4f4f4);
+const LIGHT_PINK = Color(0xFFFEF4F4);
+const BLACK_COLOR = Color(0xFF000000);
 
 // pseudonyms... to make our code more intuitive/readable
 const TOP_BAR_COLOR = DARK_GREEN; //aRGB
@@ -21,3 +23,6 @@ const ALT_PROFILE_CIRCLE_TEXT_COLOR = Colors.black;
 
 //CONFIG
 const String INITIAL_ROUTE = routeManageUniversity; //Initial screen loaded.
+
+//STATE
+int PAGE_INDEX = 0;

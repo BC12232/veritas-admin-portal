@@ -1,6 +1,7 @@
 //Container of the whole app (has navbar + dynamic content)
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:veritas_admin/globals/global_instances.dart';
 
 import 'navigation_bar.dart';
 
@@ -14,7 +15,7 @@ class AppView extends StatelessWidget {
     return Scaffold(
       backgroundColor: Colors.white,
       body: Column(
-        children: [NavigationBar(), Expanded(child: child)],
+        children: [Expanded(child: child)],
       ),
     );
   }
