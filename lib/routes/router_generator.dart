@@ -2,11 +2,14 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:veritas_admin/routes/routes.dart';
 import 'package:veritas_admin/views/financial_summary/financial_summary_view.dart';
+import 'package:veritas_admin/views/gcm/gcm_prep_view.dart';
 import 'package:veritas_admin/views/gcm/gcm_view.dart';
 import 'package:veritas_admin/views/manage_admin/manage_admin_view.dart';
 import 'package:veritas_admin/views/manage_university/manage_university_view.dart';
 import 'package:veritas_admin/views/view_pairings_view/view_pairings_view.dart';
 import 'package:veritas_admin/views/view_users/view_users_view.dart';
+
+import 'routes.dart';
 
 class RouteGenerator {
   static Route<dynamic> generateRoute(RouteSettings settings) {
@@ -19,6 +22,9 @@ class RouteGenerator {
         break;
       case routeGCM:
         return MyCustomRoute(builder: (_) => GCMView());
+        break;
+      case routeGCMprep:
+        return MyCustomRoute(builder: (_) => GCMPrepView());
         break;
       case routeViewUsers:
         return MyCustomRoute(builder: (_) => ViewUsersView());

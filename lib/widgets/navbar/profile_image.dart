@@ -29,8 +29,8 @@ class ProfileImage extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 Container(
-                    padding: EdgeInsets.fromLTRB(0, 0, 0,
-                        10), // hacky-hack to get the letter to center in the circle :/
+                    // padding: EdgeInsets.fromLTRB(0, 0, 0,
+                    //     10), // hacky-hack to get the letter to center in the circle :/
                     child: Text(letterFirstName,
                         style: TextStyle(
                             color: _isInNav
