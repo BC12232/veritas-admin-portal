@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:veritas_admin/globals/helper_functions.dart';
+import 'package:veritas_admin/style.dart';
 import 'package:veritas_admin/widgets/login/login_form.dart';
 
 class LoginView extends StatelessWidget {
@@ -12,17 +13,17 @@ class LoginView extends StatelessWidget {
       child: Container(
         child: Column(
           children: [
-            SizedBox(height: 120),
+            SizedBox(height: getHeight(context)/3),
             Text(
               'Veritas Admin Portal',
-              style: TextStyle(fontSize: 30),
+              style: TitleTextStyle,
             ),
-            SizedBox(height: 60),
+            SizedBox(height: 100),
             LoginForm()
           ],
 
         ),
-        width: getWidth(context)*0.3,
+        width: getWidth(context)/5,
 
       ),
     );

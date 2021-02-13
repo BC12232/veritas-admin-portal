@@ -1,8 +1,9 @@
-import 'dart:js';
+//import 'dart:js';
 
 import 'package:flutter/material.dart';
 import 'package:veritas_admin/globals/constants.dart';
 import 'package:veritas_admin/globals/helper_functions.dart';
+import 'package:veritas_admin/routes/routes.dart';
 
 
 class LoginForm extends StatefulWidget{
@@ -25,8 +26,9 @@ class LoginFormState extends State<LoginForm>{
               _buildEmailField(),
               SizedBox(height: 20),
               _buildPasswordField(),
-              SizedBox(height: 40),
-              _buildSubmitButton()
+              SizedBox(height: 80),
+              SizedBox(child: _buildSubmitButton(context), height: 50, width: 150,), //1:3 ratio
+
             ]
           )
         );
@@ -39,11 +41,13 @@ Widget _buildEmailField(){
             hintText: 'Email',
             filled: true,
             fillColor: LIGHT_GREY,
-            border: new OutlineInputBorder(
+            border: OutlineInputBorder(
               borderRadius: const BorderRadius.all(
-                  const Radius.circular(10.0)
+                  const Radius.circular(60.0)
               ),
-            )
+              borderSide: BorderSide.none
+            ),
+            contentPadding: EdgeInsets.symmetric(vertical: 30.0, horizontal: 30.0),
         ),
         validator: (value){
           if (value.isEmpty){
@@ -60,11 +64,13 @@ Widget _buildPasswordField(){
       hintText: 'Password',
       filled: true,
       fillColor: LIGHT_GREY,
-      border: new OutlineInputBorder(
+      border: OutlineInputBorder(
         borderRadius: const BorderRadius.all(
-            const Radius.circular(10.0)
+            const Radius.circular(60.0)
         ),
-      )
+        borderSide: BorderSide.none,
+      ),
+      contentPadding: EdgeInsets.symmetric(vertical: 30.0, horizontal: 30.0),
     ),
     validator: (value){
       if (value.isEmpty){
@@ -75,12 +81,14 @@ Widget _buildPasswordField(){
   );
 }
 
-Widget _buildSubmitButton(){
+Widget _buildSubmitButton(BuildContext context){
   return ElevatedButton(
-    onPressed: (){}, //this is where we define logic for login
+    onPressed: (){
+      Navigator.pushNamed(context, routeHome);
+    }, //this is where we define logic for login
     style: ElevatedButton.styleFrom(
       primary: DARK_GREEN,
-      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
+      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(5)),
     ),
     child: Text('Login')
   );

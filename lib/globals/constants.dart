@@ -22,7 +22,7 @@ const ALT_PROFILE_CIRCLE_COLOR = LIGHT_GREY;
 const ALT_PROFILE_CIRCLE_TEXT_COLOR = Colors.black;
 
 //CONFIG
-const String INITIAL_ROUTE = routeManageUniversity; //Initial screen loaded.
+const String INITIAL_ROUTE = routeLoginPage; //Initial screen loaded.
 
 //STATE
 int PAGE_INDEX = 0;
