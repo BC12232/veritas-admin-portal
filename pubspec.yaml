@@ -24,7 +24,7 @@ dependencies:
   flutter:
     sdk: flutter
   universal_html: ^1.2.4
-
+  zefyr: ^1.0.0-dev.1.0
 
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
@@ -33,6 +33,7 @@ dependencies:
 dev_dependencies:
   flutter_test:
     sdk: flutter
+  
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec

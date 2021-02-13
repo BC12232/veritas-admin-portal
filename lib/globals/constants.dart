@@ -26,3 +26,11 @@ const String INITIAL_ROUTE = routeManageUniversity; //Initial screen loaded.
 
 //STATE
 int PAGE_INDEX = 0;
+
+//GCM Styles
+final TextStyle kNavButtonTextStyle =
+    TextStyle(color: BLACK_COLOR, fontSize: 20, fontWeight: FontWeight.w700);
+final TextStyle kTitleTextStyle =
+    TextStyle(color: BLACK_COLOR, fontSize: 30, fontWeight: FontWeight.w700);
+final TextStyle kSmallButtonTextStyle =
+    TextStyle(color: Colors.white, fontSize: 18, fontWeight: FontWeight.w400);
