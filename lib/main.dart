@@ -6,7 +6,6 @@ import 'package:veritas_admin/globals/constants.dart';
 import 'package:veritas_admin/routes/router_generator.dart';
 import 'package:veritas_admin/routes/routes.dart';
 import 'package:veritas_admin/style.dart';
-import 'package:veritas_admin/views/home_page/home_page_view.dart';
 
 import 'widgets/navbar/app_view.dart';
 
@@ -25,11 +24,10 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      home: HomePageView(),
       builder: (_, child) => AppView(
         child: child,
       ),
-      //initialRoute: INITIAL_ROUTE,
+      initialRoute: INITIAL_ROUTE,
       navigatorKey: navKey, //allows navigation without context.
       onGenerateRoute: RouteGenerator.generateRoute,
     );

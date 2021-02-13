@@ -4,8 +4,10 @@ import 'package:veritas_admin/routes/routes.dart';
 import 'package:veritas_admin/views/financial_summary/financial_summary_view.dart';
 import 'package:veritas_admin/views/gcm/gcm_prep_view.dart';
 import 'package:veritas_admin/views/gcm/gcm_view.dart';
+import 'package:veritas_admin/views/home_page/home_page_view.dart';
 import 'package:veritas_admin/views/manage_admin/manage_admin_view.dart';
 import 'package:veritas_admin/views/manage_university/manage_university_view.dart';
+import 'package:veritas_admin/views/view_login/login_view.dart';
 import 'package:veritas_admin/views/view_pairings_view/view_pairings_view.dart';
 import 'package:veritas_admin/views/view_users/view_users_view.dart';
 
@@ -34,6 +36,12 @@ class RouteGenerator {
         break;
       case routeFinancialSummary:
         return MyCustomRoute(builder: (_) => FinancialSummaryView());
+        break;
+      case routeLoginPage:
+        return MyCustomRoute(builder: (_) => LoginView());
+        break;
+      case routeHome:
+        return MyCustomRoute(builder: (_) => HomePageView());
         break;
     }
   }

@@ -17,8 +17,8 @@ const AppBarTextStyle = TextStyle(
 
 const TitleTextStyle = TextStyle(
   fontFamily: FontNameDefault,
-  fontWeight: FontWeight.w300, //100 to 900 (this comes from pubspec.yaml)
-  fontSize: LargeTextSize,
+  fontWeight: FontWeight.w700, //100 to 900 (this comes from pubspec.yaml)
+  fontSize: 40,
   color: Colors.black,
 );
 
