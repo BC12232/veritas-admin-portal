@@ -43,23 +43,71 @@ class PromotionCardState extends State<PromotionCard>{
   @override
   Widget build(BuildContext context) {
     return Container(
-      color: LIGHT_GREY,
+      alignment: Alignment.centerLeft,
       width: getWidth(context)/4,
-      height: getWidth(context)*1.25,
-      margin: EdgeInsets.all((getWidth(context)/32)), //4 for the size of the card * 8 for the actual margins inside the card
+      height: getHeight(context)/2,
+      padding: EdgeInsets.all(30), //4 for the size of the card * 8 for the actual padding inside the card
       decoration: BoxDecoration(
-        borderRadius: BorderRadius.all(Radius.circular(20))
+        borderRadius: BorderRadius.all(Radius.circular(20)),
+        color: LIGHT_GREY,
       ),
       child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Text(widget.date),
+          Text(
+            widget.date,
+            style: TextStyle(
+              fontSize: 20,
+            ),
+          ),
           SizedBox(height: 30), //makes me cry a little --> will come back to find better implementation if time permits
           //tango card ID you need like a container
+          SizedBox(
+            width: double.infinity,
+            child: Container(
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.all(Radius.circular(25)),
+                color: Colors.white70,
+              ),
+              child: Text(widget.tangoID),
+              padding: EdgeInsets.symmetric(horizontal: 20, vertical: 20),
+            ),
+          ),
+          SizedBox(height: 30),
           //amount
-          //padding
+          Container(
+            margin: EdgeInsets.only(bottom: 10),
+            child: Text(
+              "Amount: " + widget.amount.toString(),
+              style: TextStyle(
+                fontSize: 18,
+              ),
+            )
+          ),
+          Container(
+            margin: EdgeInsets.only(bottom: 10),
+            child: Text(
+              "Total funds: " + widget.totalFunds.toString(),
+              style: TextStyle(
+                fontSize: 18,
+              ),
+            )
+          ),
           //description
-          //switch
-          //row --> edit delete
+          Container(
+            //margin: EdgeInsets.only(bottom: 10),
+            child: Text(
+                "Description: " + widget.description,
+                style: TextStyle(
+                  fontSize: 18,
+                ),
+              ),
+          ),
+          Row(
+            children: [
+              //do we already have buttons
+            ],
+          )
         ],
       ),
     );

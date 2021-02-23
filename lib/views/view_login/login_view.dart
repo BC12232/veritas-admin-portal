@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:veritas_admin/globals/helper_functions.dart';
 import 'package:veritas_admin/style.dart';
+import 'package:veritas_admin/widgets/gcm/Manage_Promotion_Card.dart';
 import 'package:veritas_admin/widgets/login/login_form.dart';
 
 class LoginView extends StatelessWidget {
@@ -20,6 +21,7 @@ class LoginView extends StatelessWidget {
             ),
             SizedBox(height: 100),
             LoginForm()
+            //PromotionCard(tangoID: "123", date: "date", amount: 123, totalFunds: 123, description: "description")
           ],
 
         ),
